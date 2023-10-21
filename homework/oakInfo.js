@@ -7,34 +7,33 @@ app.use(async (ctx) => {
   ctx.response.body = `
 
   <html>
-  <body>
-    <h1>Hello!<h1>
-  </body>
+    <body>
+    </body>
   </html>`
 
   if (ctx.request.url.pathname == `/ nqu`) {
     ctx.response.body = `
-    < html >
-    <body>
-      <a href="https://www.nqu.edu.tw/">金大網頁</a>
-    </body>
-    </html > `
+    <html>
+      <body>
+        <a href="https://www.nqu.edu.tw/">金大網頁</a>
+      </body>
+    </html> `
   }
 
   else if (ctx.request.url.pathname == `/ nqu / csie`) {
     ctx.response.body = `
-    < html >
-    <body>
-      <a href="https://csie.nqu.edu.tw/">金大資工系</a>
-    </body>
-    </html > `
+    < html>
+      <body>
+        <a href="https://csie.nqu.edu.tw/">金大資工系</a>
+      </body>
+    </html> `
   }
 
-  else if (ctx.request.url.pathname == `/ to / nqu`) {
+  else if (ctx.request.url.pathname == `/to/nqu`) {
     ctx.response.redirect('https://www.nqu.edu.tw/')
   }
 
-  else if (ctx.request.url.pathname == `/ to / nqu / csie`) {
+  else if (ctx.request.url.pathname == `/to/nqu/csie`) {
     ctx.response.redirect('https://csie.nqu.edu.tw/')
   }
 });
